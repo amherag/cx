@@ -381,6 +381,10 @@ func DeclarationSpecifiers(declSpec *CXArgument, arraySize int, opTyp int) *CXAr
 		// arg.DeclarationSpecifiers = append(arg.DeclarationSpecifiers, DECL_BASIC)
 		arg.TotalSize = arg.Size
 		return arg
+	case DECL_FUNC:
+		// Creating this case if additional operations are needed in the
+		// future.
+		return declSpec
 	}
 
 	return nil
